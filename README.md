@@ -30,7 +30,9 @@ After running the above shell script (can check on status by typing in "squeue -
 
 The prediction output for each molecule consists of the following columns:
 **Pos** Residue number (starting from 0)
+
 **MHC** MHC molecule name
+
 **Peptide*** Amino acid sequence
 **Of** Starting position offset of the optimal binding core (starting from 0)
 **Core** Binding core register
