@@ -1,12 +1,11 @@
 # NetMHCIIPan
-This is a basic tutorial on how to set up NetMHCIIPan on the Fred Hutch computing clusters.
-Please read below for overview of how to run NetMHCIIPan shell script. 
+This is a basic tutorial on how to set up NetMHCIIPan on the Fred Hutch computing clusters. Please read below for overview of how to run the NetMHCIIPan shell script. Of note, the source program used here is version 4.3 and is derived from "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3".
 
 # Accessing FHCC computing cluster
-Make sure you can access rhino03 (or equivalent) cluster on the FHCC servers, including ssh (https://sciwiki.fredhutch.org/scicomputing/access_methods/), and for ease of transferring larger files, an ftp client such as filezilla.
+Make sure you can access rhino03 (or equivalent) cluster on the FHCC servers, including ssh (https://sciwiki.fredhutch.org/scicomputing/access_methods), and for ease of transferring larger files, an ftp client such as filezilla.
 
 # Install NetMHCIIPan
-Now, make sure to upload NetMHCIIPan (included on the main page - `netMHCIIpan-4.3e.Linux.tar.gz`) into your directory.  Source website is from (https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/). Once the file is uploaded to your desired folder, unpack using the command line 
+Now, make sure to upload NetMHCIIPan (included on the main page - `netMHCIIpan-4.3e.Linux.tar.gz`) into your directory.  Source website is from (https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3). Once the file is uploaded to your desired folder, unpack using the command line 
 ```
 tar -xzvf netMHCIIpan-4.3e.Linux.tar.gz
 ```
@@ -18,9 +17,11 @@ NetMHCIIPan will require a directory containing peptides files.  These files fol
 >CMV_PEPTIDE_001
 CDLPLVSSRLLPETS
 ```
-Note the first line is the label, and the second line is the peptide / sequence of interest. For this example, we have created a list of CMV peptide files in the folder "CMV Peptides".  The directory of folder containin all peptide files will be used as input for running NetMHCIIPan. Let us set for example, all the peptide files in the directory "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list" (replace with your directory).
+Note the first line is the label, and the second line is the peptide / sequence of interest. 
 
 For this run, download all the ".txt" files in the "CMV Peptides" folder in the repository into your directory. Folder is also accessible here "https://github.com/acyeh-lab/NetMHCIIPan/tree/main/CMV%20Peptides".
+
+The directory of folder containing all peptide files will be used as input for running NetMHCIIPan. For this example, all the peptide files from "CMV_Peptide_001.txt" to "CMV_Peptide_136.txt" are uploaded to the directory "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list" (replace with your directory).
 
 # Run shell script
 Included in this directory is a working shell script `NetMHCIIPan_Analysis.sh` that can be used to run netMHCIIpan from the command line, or send it to the slurm queue. For example, from the command line where the shell script `NetMHCIIPan_Analysis.sh` is located, run:
@@ -49,7 +50,7 @@ The prediction output for each molecule consists of the following columns:
 **%Rank_BA** - % Rank of predicted affinity compared to a set of 100.000 random natural peptides. This measure is not affected by inherent bias of certain molecules towards higher or lower mean predicted affinities (printed only if binding affinity predictions were selected)  
 **BindLevel** - (SB: strong binder, WB: weak binder). The peptide will be identified as a strong binder if the % Rank is below the specified threshold for the strong binders. The peptide will be identified as a weak binder if the % Rank is above the threshold of the strong binders but below the specified threshold for the weak binders  
 
-More information can be found here "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/".
+More information can be found here "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3".
 
 # HLA Alleles
 The above example only runs the peptides through the allele "DRB1_0101".  Other alleles can be used as well, as seen here: A comprehensive list can be found here: "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/alleles_name.txt".
