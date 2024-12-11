@@ -9,7 +9,7 @@ Make sure you can access rhino03 (or equivalent) cluster on the FHCC servers, in
 Now, make sure to upload NetMHCIIPan (included on the main page - `netMHCIIpan-4.3e.Linux.tar.gz`) into your directory.  Source website is from (https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/). Once the file is uploaded to your desired folder, unpack using the command line `tar -xzvf netMHCIIpan-4.3e.Linux.tar.gz`. Installation instructions are available in the directory "~/NetMHCIIpan-4.3/netMHCIIpan-4.3.readme" (including changing the default home directory and temp directory in the script "netMHCIIpan"). Some additional tips are provided below as well. 
 
 # Data preparation
-NetMHCIIPan will require a directory containing peptides files.  These files following a simple format:
+NetMHCIIPan will require a directory containing peptides files.  These files following a simple format. For example, the file "CMV_PEPTIDE_001.txt" contains the following text:
 ```
 >CMV_PEPTIDE_001
 CDLPLVSSRLLPETS
