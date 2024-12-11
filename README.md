@@ -48,24 +48,6 @@ The prediction output for each molecule consists of the following columns:
 More information can be found here "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/".
 
 # HLA Alleles
-The above example only runs the peptides through the allele "DRB1_0101".  Other alleles can be used as well, including
-## DRB1 
-0101, 0102, 0103, 0301, 0305, 0401, 0402, 0403, 0404, 0405, 0408, 0701, 0801, 0803, 0901, 1001, 1101, 1104, 1201, 1301, 1302, 1303, 1401, 1402, 1454, 1501, 1503, 1601 
-## DRB3
-0101, 0202
-## DRB4 
-0101, 0103
-## DRB5
-0101, 0202  
-## DP
-HLA-DPA10103-DPB10201, HLA-DPA10103-DPB10301, HLA-DPA10103-DPB10401, HLA-DPA10103-DPB10402, HLA-DPA10103-DPB10601, HLA-DPA10103-DPB11101, HLA-DPA10103-DPB11701, HLA-DPA10103-DPB12001, HLA-DPA10103-DPB12301 
-## DQ
-HLA-DQA10102-DQB10501, HLA-DQA10102-DQB10602, HLA-DQA10102-DQB10604, HLA-DQA10103-DQB10501, HLA-DQA10103-DQB10603, HLA-DQA10201-DQB10201, HLA-DQA10201-DQB10202, HLA-DQA10401-DQB10301, HLA-DQA10501-DQB10201, HLA-DQA10501-DQB10301, HLA-DQA10505-DQB10301, 
+The above example only runs the peptides through the allele "DRB1_0101".  Other alleles can be used as well, as seen here: A comprehensive list can be found here: "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/alleles_name.txt".
 
-## Murine Alleles
-H-2-IAb, H-2-IAd, H-2-IEd
-
-A comprehensive list can be found here: "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/alleles_name.txt".
-
-
-
+Note that the formatting of the allele text must be precise.  For most alleles, this follows the format "DRB1_0101", "DRB1_1501", "DRB5_0101", etc...  However, for DP and DQ alleles, the format is different, i.e. "HLA-DPA10103-DPB10201", or "HLA-DQA10102-DQB10501".  Murine alleles include "H-2-IAb", "H-2-IAd", "H-2-IEd"
