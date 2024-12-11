@@ -19,7 +19,9 @@ Note the first line is the label, and the second line is the peptide / sequence 
 
 # Run shell script
 Included in this directory is a working shell script "NetMHCIIPan_Analysis.sh" that can be used to run netMHCIIpan from the command line, or send it to the slurm queue. For example, from the command line where the shellscript is located, run:
-```sbatch -p campus-new -t 1-0 ./NetMHCIIPan_Analysis.sh /fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list DRB1_0101```
+```
+sbatch -p campus-new -t 1-0 ./NetMHCIIPan_Analysis.sh /fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list DRB1_0101
+```
 This will execute netMHCIIPan on the "campus-new" server setting a maximum of 1 day (-t 1-0) for run time, utilizing all sequence files in "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list" to find binders for the HLA allele "DRB1_0101".
 
 
