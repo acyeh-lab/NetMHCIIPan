@@ -16,7 +16,7 @@ CDLPLVSSRLLPETS
 ```
 Note the first line is the label, and the second line is the peptide / sequence of interest. For this example, we have created a list of CMV peptide files in the folder "CMV Peptides".  The directory of folder containin all peptide files will be used as input for running NetMHCIIPan. Let us set for example, all the peptide files in the directory "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list" (replace with your directory).
 
-For this run, download all the ".txt" files in the "CMV Peptides" folder in the repository into your directory.
+For this run, download all the ".txt" files in the "CMV Peptides" folder in the repository into your directory. Folder is also accessible here "https://github.com/acyeh-lab/NetMHCIIPan/tree/main/CMV%20Peptides".
 
 
 # Run shell script
@@ -25,5 +25,9 @@ Included in this directory is a working shell script "NetMHCIIPan_Analysis.sh" t
 sbatch -p campus-new -t 1-0 ./NetMHCIIPan_Analysis.sh /fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list DRB1_0101
 ```
 This will execute netMHCIIPan on the "campus-new" server setting a maximum of 1 day (-t 1-0) for run time (more than enough), utilizing all sequence files in "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list" to find binders for the HLA allele "DRB1_0101".
+
+# Expected output
+After running the above shell script (can check on status by typing in "squeue -u ayeh" or whatever username), there will be a new folder output named after the HLA allele used that contains the output data.  For example, for the above trial, we will see a new folder named "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list/DRB1_0101".
+
 
 
