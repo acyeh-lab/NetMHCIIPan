@@ -45,6 +45,7 @@ The prediction output for each molecule consists of the following columns:
 **%Rank_BA** - % Rank of predicted affinity compared to a set of 100.000 random natural peptides. This measure is not affected by inherent bias of certain molecules towards higher or lower mean predicted affinities (printed only if binding affinity predictions were selected)  
 **BindLevel** - (SB: strong binder, WB: weak binder). The peptide will be identified as a strong binder if the % Rank is below the specified threshold for the strong binders. The peptide will be identified as a weak binder if the % Rank is above the threshold of the strong binders but below the specified threshold for the weak binders  
 
+More information can be found here "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/".
 
 # HLA Alleles
 The above example only runs the peptides through the allele "DRB1_0101".  Other alleles can be used as well, including
