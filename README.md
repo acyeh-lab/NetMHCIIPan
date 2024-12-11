@@ -18,7 +18,6 @@ Note the first line is the label, and the second line is the peptide / sequence 
 
 For this run, download all the ".txt" files in the "CMV Peptides" folder in the repository into your directory. Folder is also accessible here "https://github.com/acyeh-lab/NetMHCIIPan/tree/main/CMV%20Peptides".
 
-
 # Run shell script
 Included in this directory is a working shell script "NetMHCIIPan_Analysis.sh" that can be used to run netMHCIIpan from the command line, or send it to the slurm queue. For example, from the command line where the shell script "NetMHCIIPan_Analysis.sh" is located, run:
 ```
@@ -27,7 +26,34 @@ sbatch -p campus-new -t 1-0 ./NetMHCIIPan_Analysis.sh /fh/fast/hill_g/Albert/Gen
 This will execute netMHCIIPan on the "campus-new" server setting a maximum of 1 day (-t 1-0) for run time (more than enough), utilizing all sequence files in "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list" to find binders for the HLA allele "DRB1_0101".
 
 # Expected output
-After running the above shell script (can check on status by typing in "squeue -u ayeh" or whatever username), there will be a new folder output named after the HLA allele used that contains the output data.  For example, for the above trial, we will see a new folder named "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list/DRB1_0101".
+After running the above shell script (can check on status by typing in "squeue -u ayeh" or whatever the login username is), there will be a new folder output named after the HLA allele used that contains the output data.  For example, for the above trial, we will see a new folder named "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list/DRB1_0101". In the folder, there will be a separate file named after the sequence file input, for example, "CMV_PEPTIDE_001.txt" in the output folder will contain the list of all potential binders.
+
+# HLA Alleles
+The above example only runs the peptides through the allele "DRB1_0101".  Other alleles can be used as well, including
+#--- DRB1 ---#
+#0101, 0102, 0103, 0301, 0305, 0401, 0402, 0403, 0404, 0405, 0408, 0701, 0801, 0803, 0901, 1001, 1101, 1104, 1201, 1301, 1302, 1303, 1401,
+#1402, 1454, 1501, 1503, 1601 
+
+#--- DRB3 ---#
+#0101, 0202
+
+#--- DRB4 ---#
+#0101, 0103
+
+#--- DRB5 ---#
+#0101, 0202  
+
+#--- DP ---#
+#HLA-DPA10103-DPB10201, HLA-DPA10103-DPB10301, HLA-DPA10103-DPB10401, HLA-DPA10103-DPB10402, HLA-DPA10103-DPB10601, 
+#HLA-DPA10103-DPB11101, HLA-DPA10103-DPB11701, HLA-DPA10103-DPB12001, HLA-DPA10103-DPB12301 
+
+#--- DQ ---#
+#HLA-DQA10102-DQB10501, HLA-DQA10102-DQB10602, HLA-DQA10102-DQB10604, HLA-DQA10103-DQB10501, HLA-DQA10103-DQB10603,
+#HLA-DQA10201-DQB10201, HLA-DQA10201-DQB10202, HLA-DQA10401-DQB10301, HLA-DQA10501-DQB10201, HLA-DQA10501-DQB10301,
+#HLA-DQA10505-DQB10301, 
+
+#--- Murine ---#
+#H-2-IAb, H-2-IAd, H-2-IEd
 
 
 
