@@ -14,7 +14,7 @@ NetMHCIIPan will require a directory containing peptides files.  These files fol
 >CMV_PEPTIDE_001
 CDLPLVSSRLLPETS
 ```
-Note the first line is the label, and the second line is the peptide / sequence of interest.
+Note the first line is the label, and the second line is the peptide / sequence of interest. For this example, we have created a list of CMV peptide files in the folder "CMV Peptides".  The directory of folder containin all peptide files will be used as input for running NetMHCIIPan.
 
 # Scripts
 There are 2 scripts provided (run sequentially):
