@@ -19,14 +19,14 @@ Note the first line is the label, and the second line is the peptide / sequence 
 For this run, download all the ".txt" files in the "CMV Peptides" folder in the repository into your directory. Folder is also accessible here "https://github.com/acyeh-lab/NetMHCIIPan/tree/main/CMV%20Peptides".
 
 # Run shell script
-Included in this directory is a working shell script "NetMHCIIPan_Analysis.sh" that can be used to run netMHCIIpan from the command line, or send it to the slurm queue. For example, from the command line where the shell script "NetMHCIIPan_Analysis.sh" is located, run:
+Included in this directory is a working shell script `NetMHCIIPan_Analysis.sh` that can be used to run netMHCIIpan from the command line, or send it to the slurm queue. For example, from the command line where the shell script `NetMHCIIPan_Analysis.sh` is located, run:
 ```
 sbatch -p campus-new -t 1-0 ./NetMHCIIPan_Analysis.sh /fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list DRB1_0101
 ```
 This will execute netMHCIIPan on the "campus-new" server setting a maximum of 1 day (-t 1-0) for run time (more than enough), utilizing all sequence files in "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list" to find binders for the HLA allele "DRB1_0101".
 
 # Expected output
-After running the above shell script (can check on status by typing in "squeue -u ayeh" or whatever the login username is), there will be a new folder output named after the HLA allele used that contains the output data.  For example, for the above trial, we will see a new folder named "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list/DRB1_0101". In the folder, there will be a separate file named after the sequence file input, for example, "CMV_PEPTIDE_001.txt" in the output folder will contain the list of all potential binders.
+After running the above shell script (can check on status by typing in `squeue -u ayeh` or whatever the login username is), there will be a new folder output named after the HLA allele used that contains the output data.  For example, for the above trial, we will see a new folder named "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list/DRB1_0101". In the folder, there will be a separate file named after the sequence file input, for example, "CMV_PEPTIDE_001.txt" in the output folder will contain the list of all potential binders.
 
 The prediction output for each molecule consists of the following columns:
 **Pos** - Residue number (starting from 0)  
