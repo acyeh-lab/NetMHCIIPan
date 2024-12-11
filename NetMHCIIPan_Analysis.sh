@@ -11,7 +11,7 @@ for eachfile in $files
 do
   temp=$(basename $eachfile)
   subfile="$dir/$hla/$temp"
-  /fh/fast/hill_g/Albert/NetMHCIIPan/netMHCIIpan-4.1/netMHCIIpan "-f" $eachfile "-a" $hla > $subfile
+  /fh/fast/hill_g/Albert/NetMHCIIPan/netMHCIIpan-4.3/netMHCIIpan "-f" $eachfile "-a" $hla > $subfile #Note change the initial directory to the location of netMHCIIpan install
 done
 
 #A=$1 #File to Anlayze without the ".txt"
@@ -19,5 +19,5 @@ done
 #C="$1.txt"
 #D="$1_analysis.txt"
 
-#/fh/fast/hill_g/Albert/NetMHCIIPan/netMHCIIpan-4.1/netMHCIIpan "-f" $C "-a" $B > $D
+#/fh/fast/hill_g/Albert/NetMHCIIPan/netMHCIIpan-4.3/netMHCIIpan "-f" $C "-a" $B > $D
 
