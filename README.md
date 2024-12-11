@@ -30,7 +30,7 @@ After running the above shell script (can check on status by typing in "squeue -
 
 # HLA Alleles
 The above example only runs the peptides through the allele "DRB1_0101".  Other alleles can be used as well, including
-#--- DRB1 ---#
+## DRB1 
 #0101, 0102, 0103, 0301, 0305, 0401, 0402, 0403, 0404, 0405, 0408, 0701, 0801, 0803, 0901, 1001, 1101, 1104, 1201, 1301, 1302, 1303, 1401,
 #1402, 1454, 1501, 1503, 1601 
 
