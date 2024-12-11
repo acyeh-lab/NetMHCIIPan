@@ -5,19 +5,16 @@ Please read below for overview of how to run NetMHCIIPan shell script.
 # Accessing FHCC computing cluster
 Make sure you can access rhino03 (or equivalent) cluster on the FHCC servers, including ssh (https://sciwiki.fredhutch.org/scicomputing/access_methods/), and for ease of transferring larger files, an ftp client such as filezilla.
 
-# Install NetMHCII Pan
-Now, make sure to upload NetMHCIIPan (included on the main page - `netMHCIIpan-4.3e.Linux.tar.gz`) into your directory.  Source website is from `https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/`. Once the file is uploaded to your desired folder, unpack using the command line `tar -xzvf netMHCIIpan-4.3e.Linux.tar.gz`.
+# Install NetMHCIIPan
+Now, make sure to upload NetMHCIIPan (included on the main page - `netMHCIIpan-4.3e.Linux.tar.gz`) into your directory.  Source website is from (https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/). Once the file is uploaded to your desired folder, unpack using the command line `tar -xzvf netMHCIIpan-4.3e.Linux.tar.gz`.
 
 # Data preparation
-Input files needed to run scripts include:
-1) donor TCR sequences
-2) recipient 1 TCR sequences
-3) recipient 2 TCR sequences
-
-File structure for each of the above must contain the following named columns:
-1) "rearrangement" - a unique string containing CDR3 nucleotides (e.g. "CTCTGCAGCCTGGGAATCAGAACGTGCGAAGCAGAAGACTCAGCACTGTACTTGTGCTCCAGCAGTCAAAGGGGTGACACCCAGTAC")
-2) "templates" - is the number of counts identified from sequencing (e.g. "11")
-3) "frame_type" - is either "In" or "Out" - all frame_types set to "Out" are omitted from calculation (this column is derived from Adaptive's TCRB (v3) assay). If want to use all TCRs in file, set all templates to "frame_type" equal to "In"
+NetMHCIIPan will require a directory containing peptides files.  These files following a simple format:
+```
+>CMV_PEPTIDE_001
+CDLPLVSSRLLPETS
+```
+Note the first line is the label, and the second line is the peptide / sequence of interest.
 
 # Scripts
 There are 2 scripts provided (run sequentially):
