@@ -29,23 +29,21 @@ This will execute netMHCIIPan on the "campus-new" server setting a maximum of 1 
 After running the above shell script (can check on status by typing in "squeue -u ayeh" or whatever the login username is), there will be a new folder output named after the HLA allele used that contains the output data.  For example, for the above trial, we will see a new folder named "/fh/fast/hill_g/Albert/Genomes_Proteomes/Viral_Sequences/CMV_Peptides/core-list/DRB1_0101". In the folder, there will be a separate file named after the sequence file input, for example, "CMV_PEPTIDE_001.txt" in the output folder will contain the list of all potential binders.
 
 The prediction output for each molecule consists of the following columns:
-**Pos** Residue number (starting from 0)
-
-**MHC** MHC molecule name
-
-**Peptide*** Amino acid sequence
-**Of** Starting position offset of the optimal binding core (starting from 0)
-**Core** Binding core register
-**Core_Rel** Reliability of the binding core, expressed as the fraction of networks in the ensemble selecting the optimal core
-**Inverted** Whether the peptide binds inverted to the given MHC molecule (1: inverted, 0: forward)
-**Identity** Annotation of the input sequence, if specified
-**Score_EL** Eluted ligand prediction score
-**%Rank_EL** Percentile rank of eluted ligand prediction score
-**Exp_bind** If the input was given in PEPTIDE format with an annotated affinity value (mainly for benchmarking purposes).
-**Score_BA** Predicted binding affinity in log-scale (printed only if binding affinity predictions were selected)
-**Affinity(nM)** Predicted binding affinity in nanomolar IC50 (printed only if binding affinity predictions were selected)
-**%Rank_BA** % Rank of predicted affinity compared to a set of 100.000 random natural peptides. This measure is not affected by inherent bias of certain molecules towards higher or lower mean predicted affinities (printed only if binding affinity predictions were selected)
-**BindLevel** (SB: strong binder, WB: weak binder). The peptide will be identified as a strong binder if the % Rank is below the specified threshold for the strong binders. The peptide will be identified as a weak binder if the % Rank is above the threshold of the strong binders but below the specified threshold for the weak binders.
+**Pos** - Residue number (starting from 0)__
+**MHC** - MHC molecule name__
+**Peptide** - Amino acid sequence__
+**Of** - Starting position offset of the optimal binding core (starting from 0)__
+**Core** - Binding core register
+**Core_Rel** - Reliability of the binding core, expressed as the fraction of networks in the ensemble selecting the optimal core
+**Inverted** - Whether the peptide binds inverted to the given MHC molecule (1: inverted, 0: forward)
+**Identity** - Annotation of the input sequence, if specified
+**Score_EL** - Eluted ligand prediction score
+**%Rank_EL** - Percentile rank of eluted ligand prediction score
+**Exp_bind** - If the input was given in PEPTIDE format with an annotated affinity value (mainly for benchmarking purposes).
+**Score_BA** - Predicted binding affinity in log-scale (printed only if binding affinity predictions were selected)
+**Affinity(nM)** - Predicted binding affinity in nanomolar IC50 (printed only if binding affinity predictions were selected)
+**%Rank_BA** - % Rank of predicted affinity compared to a set of 100.000 random natural peptides. This measure is not affected by inherent bias of certain molecules towards higher or lower mean predicted affinities (printed only if binding affinity predictions were selected)
+**BindLevel** - (SB: strong binder, WB: weak binder). The peptide will be identified as a strong binder if the % Rank is below the specified threshold for the strong binders. The peptide will be identified as a weak binder if the % Rank is above the threshold of the strong binders but below the specified threshold for the weak binders.
 
 
 # HLA Alleles
