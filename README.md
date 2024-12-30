@@ -56,3 +56,6 @@ More information can be found here "https://services.healthtech.dtu.dk/services/
 The above example only runs the peptides through the allele "DRB1_0101".  Other alleles can be used as well, as seen here: A comprehensive list can be found here: "https://services.healthtech.dtu.dk/services/NetMHCIIpan-4.3/alleles_name.txt".
 
 Note that the formatting of the allele text must be precise.  For most alleles, this follows the format "DRB1_0101", "DRB1_1501", "DRB5_0101", etc...  However, for DP and DQ alleles, the format is different, i.e. "HLA-DPA10103-DPB10201", or "HLA-DQA10102-DQB10501".  Murine alleles include "H-2-IAb", "H-2-IAd", "H-2-IEd"
+
+# Parameters
+Can modiful other factors, including length of peptide read (e.g. -length 15 is default; we changed to -length 9 as some of the eluted class II peptides are only 9 AAs in length)
